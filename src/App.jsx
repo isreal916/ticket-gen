@@ -9,7 +9,6 @@ function App() {
     <>
       <Router>
      <Header />
-    
         <Routes>
           <Route path="/" element={<Form />} />
           <Route path="/myticket" element={<Ticket />} />

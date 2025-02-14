@@ -3,14 +3,18 @@ import Progress from "../components/progress";
 import "./form.css";
 import qr from "../assets/qr.svg";
 import Button from "../components/button";
+import { useNavigate } from 'react-router-dom'
+
+
 const Ticket = () => {
   const [tickets, setTickets] = useState([]);
   console.log(tickets);
-
+ const navigate = useNavigate();
   useEffect(() => {
     const storedTickets = JSON.parse(localStorage.getItem("formData")) || [];
     setTickets(storedTickets);
   }, []);
+  
 
   return (
     <>
@@ -121,8 +125,8 @@ const Ticket = () => {
         </div>
         </div>
         <div className="action-button">
-            <Button text="cancel" backgroundColor="#041E23" />
-            <Button text="Next" backgroundColor="#24A0B5" onClick={()=>setShow(2)}/>
+            <Button text="Book Another Ticket" backgroundColor="#041E23" onClick={()=> navigate('/')} />
+            <Button text="Download Ticket" backgroundColor="#24A0B5" />
           </div>
       </div>
     </>

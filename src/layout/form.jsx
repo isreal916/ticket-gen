@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import { useNavigate } from 'react-router-dom'
 import "react-toastify/dist/ReactToastify.css";
 import "./form.css";
 import { useDropzone } from "react-dropzone";
@@ -9,7 +10,6 @@ import Progress from "../components/progress";
 import AccessType from "../components/access";
 import ticketTypes from "../data";
 import Button from "../components/button";
-import Dropzone from "../components/imguploader";
 
 const Form = () => {
   const [img, setImg] = React.useState("none");
@@ -44,7 +44,7 @@ const Form = () => {
     setErrors(tempErrors);
     return Object.keys(tempErrors).length === 0;
   };
-
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     const combinedData = {
       ...formData,
@@ -52,11 +52,10 @@ const Form = () => {
     };
     e.preventDefault();
     if (validate()) {
-      alert("Form data submitted: " + JSON.stringify(combinedData));
       localStorage.setItem("formData", JSON.stringify(combinedData));
-
+     
+      navigate('/myticket');
       // Handle form submission logic here
-      console.log("Form data submitted:", combinedData);
     } else {
       toast.error("Please fix the errors in the form");
     }

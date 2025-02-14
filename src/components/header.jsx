@@ -90,7 +90,7 @@ const Header = () => {
         <li>About Projects</li>
       </ul>
       <button>
-        <Link to="/mytickets">
+        <Link to="/myticket">
         My Tickets
         </Link>
       </button>
