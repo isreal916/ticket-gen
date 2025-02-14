@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+.access-button {
+  border-radius: var(--Radius-reg-2, 12px);
+  border: 1px solid #197686;
+  background: inherit;
+  padding: 8px;
+  width: 15.125rem;
+  cursor:pointer;
+  color:white;
+}
+.access-button:first{
+  background:#2BA4B9
+}
+.access-button button {
+  display: inline;
+  float:right;
+  width: 80px;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: var(--Radius-reg, 8px);
+  font-family: "Roboto", serif;
+  border: 1px solid #2ba4b9;
+  background: #0e464f;
+  color:white;
+
+}
+.access-button span {
+  font-family: "Roboto", serif;
+}
+.access-button:hover {
+  background-color: #2ba4b9;
+}
+.active{
+    background-color: #2BA4B9;
+}
+@media screen and (max-width: 768px) {
+  .access-button,.access-buttons {
+    width:100%;
+  }
+  
+}

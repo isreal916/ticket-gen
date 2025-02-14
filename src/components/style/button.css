@@ -1,0 +1,18 @@
+#button{
+    border: 1px solid #24A0B5;
+    color: white;
+    padding: 14px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    width: 15.93rem;
+    border-radius:12px
+}
+@media screen and (max-width: 768px) {
+    #button{
+        width:100%
+    }
+
+}
