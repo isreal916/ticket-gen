@@ -35,7 +35,7 @@ const Form = () => {
     let tempErrors = {};
 
     if (!formData.name) tempErrors.name = "Name is required";
-    if (img == "none") tempErrors.img = "Name is required";
+    if (img == "none") tempErrors.img = "Img is required";
     if (!formData.email) {
       tempErrors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
